@@ -11,7 +11,7 @@ SetPackageInfo( rec(
 PackageName := "nilcano",
 Subtitle := "Canonical conjugacy representatives in nilpotent groups",
 Version := "1.0",
-Date := "07/04/2025", # dd/mm/yyyy format
+Date := "18/04/2025", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 
 Persons := [
@@ -33,7 +33,7 @@ SourceRepository := rec(
     URL := "https://github.com/osferay/nilcano",
 ),
 IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
-PackageWWWHome  := "https://osferay.github.io/software/nilcano/",
+PackageWWWHome  := "https://osferay.github.io/research/software/nilcano/",
 PackageInfoURL  := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
 README_URL      := Concatenation( ~.PackageWWWHome, "README.md" ),
 ArchiveURL      := Concatenation( ~.SourceRepository.URL,
