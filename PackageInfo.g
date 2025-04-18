@@ -11,7 +11,7 @@ SetPackageInfo( rec(
 PackageName := "nilcano",
 Subtitle := "Canonical conjugacy representatives in nilpotent groups",
 Version := "1.0",
-Date := "07/04/2025", # dd/mm/yyyy format
+Date := "18/04/2025", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 
 Persons := [
