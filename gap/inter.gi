@@ -29,8 +29,8 @@ InstallGlobalFunction( "IntersectionSeriesTerm", function(U, term)
 end );
 
 #######################################################################
-## Global function to calculate the intersection of U with a the     ##
-## terms of the efa series of G                                      ##
+## Global function to calculate the intersection of U with the       ##
+## terms of the pcp series of G                                      ##
 #######################################################################
 
 InstallGlobalFunction( "InducedIntersectionSeries", function(G, U) 

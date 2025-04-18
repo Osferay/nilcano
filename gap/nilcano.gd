@@ -22,8 +22,6 @@
 #! element $g$ is $e_d$ where $d = dep(g)$. The identity element satisfies $dep(1) = n + 1$ and does not
 #! have leading exponent.
 
-DeclareInfoClass( "InfoConjugacyElements" );
-DeclareInfoClass( "InfoConjugacySubgroups" );
 
 ### General.gi
 DeclareGlobalFunction( "ReducePcpElement" );
@@ -49,11 +47,12 @@ DeclareGlobalFunction( "Sifting" );
 
 #! One of the main program of this package is to compute the minimum element in $ g^U $ with respect to 
 #! $\ll$ this element is known as the canonical conjugacy representative of $ g$, this element is 
-#! denoted as $Cano_U(g)$. This program also computes the centralizer $ C_U(g)$.
+#! denoted as $Cano_U(g)$. This program also computes the centralizer $ C_U(g)$. This package is supplementary to the
+#! article of Eick and Fernández Ayala <Cite Key="cano" />.
 
 ### conjugacy.gi
 #! @Description
-#! Computes the centralizer of a given set of elements $elms$ in $G$
+#! Computes the centralizer of a given set of elements $elms$ in $G$.
 #! @Arguments G, elms
 DeclareGlobalFunction( "CentralizerNilGroup" );
 #! @Description
@@ -61,13 +60,19 @@ DeclareGlobalFunction( "CentralizerNilGroup" );
 #! @Arguments G, g, h
 DeclareGlobalFunction( "IsConjugateNilGroup" );
 #! @Description
-#! Computes the canonical conjugate representative of a given elements $elms$ in $G$.
+#! Computes the canonical conjugate representative of a given elements $elms$ in $G$. Returns a record containing the
+#! canonical conjugates, the conjugating elements to obtain the canonical conjugate and the centralizers of the given elements.
 #! @Arguments G, elms
 DeclareGlobalFunction( "CanonicalConjugateElements" );
 #! @Description
-#! Checks if a set of elements $elms$ in $G$ are conjugate using the canonical representative aproach. If so it returns the conjugating element.
+#! Checks if a set of elements $elms$ in $G$ are conjugate using the canonical representative aproach. 
+#! If so it returns a record containing the canonical conjugate representative, the conjugating elements and the centralizer.
 #! @Arguments G, elms
 DeclareGlobalFunction( "IsCanonicalConjugateElements" );
+#! @Description
+#! Info class for the functions of canonical conjugates for elements.
+DeclareInfoClass( "InfoConjugacyElements" );
+
 
 #! @Section Canonical conjugate representatives for subgroups
 
@@ -90,30 +95,62 @@ DeclareGlobalFunction( "IsCanonicalConjugateElements" );
 #! One of the main program of this package is to compute $Cano_V (W )$. This program also computes the normalizer
 #! of $ N_V(W) $.
 
+#! @Description
+#! Computes the normalizer of a given subgroup $U$ of $G$.
+#! @Arguments G, U
 DeclareGlobalFunction( "NormalizerNilGroup" );
+#! @Description
+#! Checks if two given subgroups $U$ and $V$ of $G$ are conjugate. If so it returns the conjugating element.
+#! @Arguments G, U, V
 DeclareGlobalFunction( "IsConjugateSubgroups" );
+#! @Description
+#! Computes the canonical conjugate representative of a given subgroup $U$ of $G$. Returns a record containing the
+#! canonical conjugate subgroup, the conjugating element and the normalizer of the given subgroup.
+#! @Arguments G, U
 DeclareGlobalFunction( "CanonicalConjugateSubgroup");
+#! @Description
+#! Checks if two subgroup $U,V$ of $G$ are conjugate using the canonical representative aproach. If so it
+#! returns a record containing the canonical conjugate subgroup, the conjugating elements and the normalizer of the given subgroups.
+#! @Arguments G, U, V
 DeclareGlobalFunction( "IsCanonicalConjugateSubgroups" );
+#! @Description
+#! Info class for the functions of canonical conjugates for subgroups.
+DeclareInfoClass( "InfoConjugacySubgroups" );
 
 #! @Section Canonical conjugate representatives for lists
 
+#! @Description
+#! Given a list of elements of a nilpotent group $G$ returns a list of canonical representative conjugates of the list and the position of the elements that
+#! belong to the given canonical conjugacy class.
+#! @Arguments G, list
 DeclareGlobalFunction( "CanonicalConjugateList" );
+#! @Description
+#! Given a list of elements of a nilpotent group $G$ returns a list of representative conjugates of the list and the position of the elements that
+#! belong to the given conjugacy class.
+#! @Arguments G, list
 DeclareGlobalFunction( "IsConjugateList" );
 
 ### Inter.gi
+#! @Section Intersection of subgroups and product pairs of subgroups
+#! This algorithms are based on Eddie's work <Cite Key="Eddie" />.
 
 DeclareGlobalFunction( "IntersectionSeriesTerm" );
 DeclareGlobalFunction( "InducedIntersectionSeries" );
 DeclareGlobalFunction( "PcpsOfInducedIntersectionSeries" );
 
-#! @Section Intersection of subgroups
 
-
+#! @Description
+#! Given two subgroups $U,V$ of a nilpotent group $G$ computes the intersection of both subgroups.
+#! @Arguments G, U, V
 DeclareGlobalFunction( "IntersectionSubgroupsNilGroups" );
 
 ### prod.gi
 
-#! @Section Product pairs of subgroups
-
-DeclareGlobalFunction( "SubgroupProductPair" );
+#! @Description
+#! Given two subgroups $U,V$ of a nilpotent group $G$ computes the subgroup product pair of both subgroups.
+#! @Arguments G, U, V
+DeclareGlobalFunction( "SubgroupProductPair" );#! @Description
+#! Given two subgroups $U,V$ of a nilpotent group $G$ and an element $g$ in $G$ computes the decompostion of $g$
+#! under the product pair of both subgroups.
+#! @Arguments G, U, V, g
 DeclareGlobalFunction( "ProductDecomposition" );

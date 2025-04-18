@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE file SYSTEM "bibxmlext.dtd">
+<file>
+
+<entry id="cano"><article>
+  <author>
+    <name><first>Bettina</first><last>Eick</last></name>
+    <name><first>Óscar</first><last>Fernández Ayala</last></name>
+  </author>
+  <title>The conjugacy problem and canonical representatives in finitely generated nilpotent groups</title>
+  <journal>Journal of Symbolic Computation</journal>
+  <year>2025</year>
+  <volume>130</volume>
+  <pages>Paper No. 102422, 11</pages>
+  <mrnumber>4858621</mrnumber>
+  <mrclass>20F18 (20E45)</mrclass>
+</article></entry>
+
+<entry id="Eddie"><article>,
+    <author>
+        <name><first>Eddie</first><last>Lo</last></name>
+    </author>
+    <title>Finding intersections and normalizers in finitely generated nilpotent groups</title>
+    <journal> Journal of Symbolic Computation </journal>
+    <volume> 25 </volume>
+    <year> 1998 </year>
+    <volume>1</volume>
+    <pages> 45 -- 59 </pages>
+    <mrnumber>1600614</mrnumber>
+    <mrclass>20-04 (20F18)</mrclass>
+</article></entry>
+
+</file>

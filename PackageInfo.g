@@ -33,7 +33,7 @@ SourceRepository := rec(
     URL := "https://github.com/osferay/nilcano",
 ),
 IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
-PackageWWWHome  := "https://osferay.github.io/nilcano/",
+PackageWWWHome  := "https://osferay.github.io/software/nilcano/",
 PackageInfoURL  := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
 README_URL      := Concatenation( ~.PackageWWWHome, "README.md" ),
 ArchiveURL      := Concatenation( ~.SourceRepository.URL,
@@ -64,7 +64,7 @@ AvailabilityTest := ReturnTrue,
 
 TestFile := "tst/testall.g",
 
-#Keywords := [ "TODO" ],
+Keywords := [ "nilpotent groups", "conjugacy problem" ],
 
 ) );
 
