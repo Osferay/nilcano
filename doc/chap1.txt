@@ -1,0 +1,30 @@
+  
+  [1X1 [33X[0;0YPreface[133X[101X
+  
+  [33X[0;0YIn  this  package  we  compute  the  canonical  conjugacy representatives of
+  elements  and  subgroups  of nilpotent groups given by a nilpotent sequence.
+  This package also include functions to compute the intersection of subgroups
+  of  nilpotent  group  and  to  compute the product of subgroups of nilpotent
+  groups.[133X
+  
+  
+  [1X1.1 [33X[0;0YNilpotent sequences[133X[101X
+  
+  [33X[0;0YLet [23XG[123X be a finitely generated nilpotent group. Then [23XG[123X has a series [23XG = G_1 >
+  G_2  >  \dots  > G_n > G_{n+1} = {1}[123X so that each Gi is normal in G and each
+  quotient  [23XG_i/G_{i+1}[123X  is  cyclic  and  central in [23XG/G_{i+1}[123X. We call such a
+  series  a nilpotent series of G. Then [23X(g_1,\dots, g_n)[123X is called a nilpotent
+  sequence  of  [23XG[123X  and [23X(o_1,\dots, o_n)[123X are its relative orders. Note that the
+  nilpotent  sequence  determines  its  nilpotent  series  as  [23XG_i  =  \langle
+  g_i,\dots, g_n \rangle[123X holds for [23X1 \leq i \leq n[123X.[133X
+  
+  [33X[0;0YEach  element  [23Xg  \in  G[123X  can  be  written  uniquely  as [23Xg = g_1^{e_1} \dots
+  g_n^{e_n}[123X with [23Xe_i \in \mathbb{Z}[123X and [23Xe_i \in \{0,\dots, o_{i −1}\}[123X if [23Xi \in
+  I[123X.  The  factorisation  [23X g_1^{e_1} \dots g_n^{e_n}[123X for [23Xg \in G[123X is called the
+  normal  form  of  [23Xg[123X.  The  associated integer vector [23X(e_1,\dots, e_n)[123X is the
+  exponent  vector  of [23Xg[123X. We write [23Xe(g) = (e_1, \dots , e_n)[123X. If [23Xe_1 = \dots =
+  e_{i−1} = 0[123X and [23Xe_i \neq 0[123X, then we write [23Xdep(g) = i[123X and call this the depth
+  of  [23Xg[123X.  The  leading  exponent  of an element [23Xg[123X is [23Xe_d[123X where [23Xd = dep(g)[123X. The
+  identity  element  satisfies  [23Xdep(1)  =  n  +  1[123X  and  does not have leading
+  exponent.[133X
+  

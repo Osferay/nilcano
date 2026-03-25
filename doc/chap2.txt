@@ -1,0 +1,155 @@
+  
+  [1X2 [33X[0;0YConjugacy[133X[101X
+  
+  
+  [1X2.1 [33X[0;0YCanonical conjugate representatives for elements[133X[101X
+  
+  [33X[0;0YSuppose that the finitely generated group [23XG[123X is given by a nilpotent sequence
+  [23X(g_1,\dots,g_n)[123X. For [23Xg \in G [123X and [23XU \leq G[123X, we denote the conjugacy class of
+  [23Xg[123X  under [23XU[123X by [23Xg^U = {g^h | h \in U}[123X and the centralizer of [23Xg[123X in [23XU[123X by [23XC_U (g)
+  = \{h \in U | g^h = g\}[123X.[133X
+  
+  [33X[0;0YLet  [23X\ll[123X  be  the well-order [23X0 \ll 1 \ll 2 \ll \dots \ll −1 \ll −2 \dots [123X of
+  [23X\mathbb{Z}[123X.   We   order  the  exponent  vectors  extending  the  well-order
+  lexicographically; that is, [23X(e_1,\dots, e_n) \ll (f_1, \dots, f_n)[123X if [23X e_1 =
+  f_1,  \dots , e_{i−1} = f_{i−1}[123X and [23Xe_i \ll f_i[123X for some [23Xi \in {1,\dots,n} [123X.
+  We  order  the elements of G via their exponent vectors; that is, [23Xg \ll h[123X if
+  [23Xe(g)  \leq  e(h)[123X.  One of the main program of this package is to compute the
+  minimum  element  in  [23X g^U [123X with respect to [23X\ll[123X this element is known as the
+  canonical  conjugacy  representative  of  [23X  g[123X,  this  element  is denoted as
+  [23XCano_U(g)[123X.  This program also computes the centralizer [23X C_U(g)[123X. This package
+  is supplementary to the article of Eick and Fernández Ayala [EFA25].[133X
+  
+  [1X2.1-1 CentralizerNilGroup[101X
+  
+  [33X[1;0Y[29X[2XCentralizerNilGroup[102X( [3XG[103X, [3Xelms[103X ) [32X function[133X
+  
+  [33X[0;0YComputes the centralizer of a given set of elements [23Xelms[123X in [23XG[123X.[133X
+  
+  [1X2.1-2 IsConjugateNilGroup[101X
+  
+  [33X[1;0Y[29X[2XIsConjugateNilGroup[102X( [3XG[103X, [3Xg[103X, [3Xh[103X ) [32X function[133X
+  
+  [33X[0;0YChecks  if  two  given elements [23Xg[123X and [23Xh[123X in [23XG[123X are conjugate. If so it returns
+  the conjugating element.[133X
+  
+  [1X2.1-3 CanonicalConjugateElements[101X
+  
+  [33X[1;0Y[29X[2XCanonicalConjugateElements[102X( [3XG[103X, [3Xelms[103X ) [32X function[133X
+  
+  [33X[0;0YComputes  the canonical conjugate representative of a given elements [23Xelms[123X in
+  [23XG[123X.  Returns  a  record  containing the canonical conjugates, the conjugating
+  elements to obtain the canonical conjugate and the centralizers of the given
+  elements.[133X
+  
+  [1X2.1-4 IsCanonicalConjugateElements[101X
+  
+  [33X[1;0Y[29X[2XIsCanonicalConjugateElements[102X( [3XG[103X, [3Xelms[103X ) [32X function[133X
+  
+  [33X[0;0YChecks  if  a  set  of  elements [23Xelms[123X in [23XG[123X are conjugate using the canonical
+  representative  aproach.  If so it returns a record containing the canonical
+  conjugate representative, the conjugating elements and the centralizer.[133X
+  
+  [1X2.1-5 InfoConjugacyElements[101X
+  
+  [33X[1;0Y[29X[2XInfoConjugacyElements[102X [32X info class[133X
+  
+  [33X[0;0YInfo class for the functions of canonical conjugates for elements.[133X
+  
+  
+  [1X2.2 [33X[0;0YCanonical conjugate representatives for subgroups[133X[101X
+  
+  [33X[0;0YSuppose that the finitely generated group [23XG[123X is given by a nilpotent sequence
+  [23X(g_1,\dots,g_n)[123X.  Given  [23XU, V \leq G[123X we write [23XU^V = \{U^g | g ∈ V \}[123X for the
+  conjugacy  class  of  [23XU[123X  under  [23XV[123X and [23XN_V(U) = \{g \in V | U^g = U\}[123X for the
+  corresponding  normalizer.  Let  [23XU  \leq G[123X be given by its basis [23X(u_1,\dots,
+  u_n)[123X.  Let  [23XN  \leq  N_G(U)[123X and [23Xg \in N[123X. We define [23XCano_N^U(g)[123X as the unique
+  reduced   preimage  of  [23XCano_{N/U}(gU)[123X  under  the  natural  homomorphism  [23XN
+  \rightarrow N/U[123X. Now we consider two subgroups [23XW[123X and [23XV[123X of [23XG[123X, and write [23XW_i =
+  W  \cap G_i [123X for [23X1 \leq i \leq n[123X. We define [23XCano_V (W )[123X inductively: suppose
+  that  [23XU_{i+1}  =  Cano_V  (W_i+1)[123X  is  given  by  a basis [23Xu_{i+1},\dots, u_n[123X
+  together with a conjugating element [23XU_i+1 = W^v_{i+1}[123X and its normalizer [23XN =
+  N_V  (U_{i+1})[123X. Suppose that [23XW_i \neq W_{i+1}[123X and [23XW_i = ⟨w_i, W_{i+1}⟩ [123X. Let
+  [23Xw_i^\prime[123X  be  the  normalized  power  of  the  conjugate  [23Xw^v_i[123X. Set [23Xu_i =
+  Cano^{U_{i+1}}_N(w^\prime_i)[123X,  then  [23X(u_i,\dots,  u_n)[123X  is  a  basis  for  a
+  subgroup  [23XU_i[123X  of  [23XG_i[123X. We write [23XCano_V (W )[123X for the subgroup [23XU_1[123X eventually
+  determined  by  an iterated process. One of the main program of this package
+  is  to  compute  [23XCano_V  (W )[123X. This program also computes the normalizer of [23X
+  N_V(W) [123X.[133X
+  
+  [1X2.2-1 NormalizerNilGroup[101X
+  
+  [33X[1;0Y[29X[2XNormalizerNilGroup[102X( [3XG[103X, [3XU[103X ) [32X function[133X
+  
+  [33X[0;0YComputes the normalizer of a given subgroup [23XU[123X of [23XG[123X.[133X
+  
+  [1X2.2-2 IsConjugateSubgroups[101X
+  
+  [33X[1;0Y[29X[2XIsConjugateSubgroups[102X( [3XG[103X, [3XU[103X, [3XV[103X ) [32X function[133X
+  
+  [33X[0;0YChecks  if  two given subgroups [23XU[123X and [23XV[123X of [23XG[123X are conjugate. If so it returns
+  the conjugating element.[133X
+  
+  [1X2.2-3 CanonicalConjugateSubgroup[101X
+  
+  [33X[1;0Y[29X[2XCanonicalConjugateSubgroup[102X( [3XG[103X, [3XU[103X ) [32X function[133X
+  
+  [33X[0;0YComputes  the canonical conjugate representative of a given subgroup [23XU[123X of [23XG[123X.
+  Returns   a   record   containing  the  canonical  conjugate  subgroup,  the
+  conjugating element and the normalizer of the given subgroup.[133X
+  
+  [1X2.2-4 IsCanonicalConjugateSubgroups[101X
+  
+  [33X[1;0Y[29X[2XIsCanonicalConjugateSubgroups[102X( [3XG[103X, [3XU[103X, [3XV[103X ) [32X function[133X
+  
+  [33X[0;0YChecks  if  two  subgroup  [23XU,V[123X  of  [23XG[123X  are  conjugate  using  the  canonical
+  representative  aproach.  If so it returns a record containing the canonical
+  conjugate subgroup, the conjugating elements and the normalizer of the given
+  subgroups.[133X
+  
+  [1X2.2-5 InfoConjugacySubgroups[101X
+  
+  [33X[1;0Y[29X[2XInfoConjugacySubgroups[102X [32X info class[133X
+  
+  [33X[0;0YInfo class for the functions of canonical conjugates for subgroups.[133X
+  
+  
+  [1X2.3 [33X[0;0YCanonical conjugate representatives for lists[133X[101X
+  
+  [1X2.3-1 CanonicalConjugateList[101X
+  
+  [33X[1;0Y[29X[2XCanonicalConjugateList[102X( [3XG[103X, [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0YGiven  a list of elements of a nilpotent group [23XG[123X returns a list of canonical
+  representative  conjugates of the list and the position of the elements that
+  belong to the given canonical conjugacy class.[133X
+  
+  [1X2.3-2 IsConjugateList[101X
+  
+  [33X[1;0Y[29X[2XIsConjugateList[102X( [3XG[103X, [3Xlist[103X ) [32X function[133X
+  
+  [33X[0;0YGiven  a  list  of  elements  of  a  nilpotent  group  [23XG[123X  returns  a list of
+  representative  conjugates of the list and the position of the elements that
+  belong to the given conjugacy class.[133X
+  
+  
+  [1X2.4 [33X[0;0YIntersection of subgroups and product pairs of subgroups[133X[101X
+  
+  [33X[0;0YThis algorithms are based on Eddie's work [Lo98].[133X
+  
+  [1X2.4-1 IntersectionSubgroupsNilGroups[101X
+  
+  [33X[1;0Y[29X[2XIntersectionSubgroupsNilGroups[102X( [3XG[103X, [3XU[103X, [3XV[103X ) [32X function[133X
+  
+  [33X[0;0YGiven  two subgroups [23XU,V[123X of a nilpotent group [23XG[123X computes the intersection of
+  both subgroups.[133X
+  
+  [1X2.4-2 ProductDecomposition[101X
+  
+  [33X[1;0Y[29X[2XProductDecomposition[102X( [3XG[103X, [3XU[103X, [3XV[103X, [3Xg[103X ) [32X function[133X
+  
+  [33X[0;0YGiven two subgroups [23XU,V[123X of a nilpotent group [23XG[123X computes the subgroup product
+  pair  of  both subgroups. Given two subgroups [23XU,V[123X of a nilpotent group [23XG[123X and
+  an  element  [23Xg[123X in [23XG[123X computes the decompostion of [23Xg[123X under the product pair of
+  both subgroups.[133X
+  

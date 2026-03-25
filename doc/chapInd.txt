@@ -1,0 +1,21 @@
+  
+  
+  [1XIndex[101X
+  
+  [2XCanonicalConjugateElements[102X 2.1-3 
+  [2XCanonicalConjugateList[102X 2.3-1 
+  [2XCanonicalConjugateSubgroup[102X 2.2-3 
+  [2XCentralizerNilGroup[102X 2.1-1 
+  [2XInfoConjugacyElements[102X 2.1-5 
+  [2XInfoConjugacySubgroups[102X 2.2-5 
+  [2XIntersectionSubgroupsNilGroups[102X 2.4-1 
+  [2XIsCanonicalConjugateElements[102X 2.1-4 
+  [2XIsCanonicalConjugateSubgroups[102X 2.2-4 
+  [2XIsConjugateList[102X 2.3-2 
+  [2XIsConjugateNilGroup[102X 2.1-2 
+  [2XIsConjugateSubgroups[102X 2.2-2 
+  [2XNormalizerNilGroup[102X 2.2-1 
+  [2XProductDecomposition[102X 2.4-2 
+  
+  
+  -------------------------------------------------------

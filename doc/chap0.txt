@@ -1,1 +1,51 @@
-Placeholder
+  
+  
+                                   [1X nilcano [101X
+  
+  
+           [1X Canonical conjugacy representatives in nilpotent groups [101X
+  
+  
+                                      1.0
+  
+  
+                                 18 April 2025
+  
+  
+                             Óscar Fernández Ayala
+  
+  
+  
+  Óscar Fernández Ayala
+      Email:    [7Xmailto:oscar00ayala@gmail.com[107X
+      Homepage: [7Xhttps://osferay.github.io[107X
+  
+  -------------------------------------------------------
+  
+  
+  [1XContents (nilcano)[101X
+  
+  1 [33X[0;0YPreface[133X
+    1.1 [33X[0;0YNilpotent sequences[133X
+  2 [33X[0;0YConjugacy[133X
+    2.1 [33X[0;0YCanonical conjugate representatives for elements[133X
+      2.1-1 CentralizerNilGroup
+      2.1-2 IsConjugateNilGroup
+      2.1-3 CanonicalConjugateElements
+      2.1-4 IsCanonicalConjugateElements
+      2.1-5 InfoConjugacyElements
+    2.2 [33X[0;0YCanonical conjugate representatives for subgroups[133X
+      2.2-1 NormalizerNilGroup
+      2.2-2 IsConjugateSubgroups
+      2.2-3 CanonicalConjugateSubgroup
+      2.2-4 IsCanonicalConjugateSubgroups
+      2.2-5 InfoConjugacySubgroups
+    2.3 [33X[0;0YCanonical conjugate representatives for lists[133X
+      2.3-1 CanonicalConjugateList
+      2.3-2 IsConjugateList
+    2.4 [33X[0;0YIntersection of subgroups and product pairs of subgroups[133X
+      2.4-1 IntersectionSubgroupsNilGroups
+      2.4-2 ProductDecomposition
+  
+  
+  [32X
