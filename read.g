@@ -7,4 +7,4 @@ ReadPackage( "nilcano", "gap/general.gi");
 ReadPackage( "nilcano", "gap/inter.gi");
 ReadPackage( "nilcano", "gap/prod.gi");
 ReadPackage( "nilcano", "gap/elmcon.gi");
-ReadPackage( "nilcano", "gap/subgroup.gi");
+ReadPackage( "nilcano", "gap/subgrpcon.gi");

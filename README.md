@@ -21,7 +21,7 @@ Either place the folder in the pkg subdirectory of your gap folder, or in any ot
 
     gap> LoadPackage("nilcano");
 	─────────────────────────────────────────────────────────────────────────────
-	Loading  nilcano 1.0 (Computation of canonical conjugacy representatives in nilpotent groups)
+	Loading  nilcano 1.1 (Computation of canonical conjugacy representatives in nilpotent groups)
 	by Oscar Fernandez Ayala (https://osferay.github.io/).
 	Homepage: https://osferay.github.io/nilcano/
 	Report issues at https://github.com/osferay/nilcano/issues
