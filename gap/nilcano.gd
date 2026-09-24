@@ -19,8 +19,8 @@
 #! and $e_i \in \{0,\dots, o_{i}-1\}$ if $i \in I$. The factorisation $ g_1^{e_1} \dots g_n^{e_n}$ for
 #! $g \in G$ is called the normal form of $g$. The associated integer vector $(e_1,\dots, e_n)$ is the
 #! exponent vector of $g$. We write $e(g) = (e_1, \dots , e_n)$. If $e_1 = \dots = e_{i−1} = 0$ and 
-#! $e_i \neq 0$, then we write $\operatorname{dep}(g) = i$ and call this the depth of $g$. The leading exponent of an
-#! element $g$ is $e_d$ where $d = \operatorname{dep}(g)$. The identity element satisfies $\operatorname{dep}(1) = n + 1$ and does not
+#! $e_i \neq 0$, then we write $\mathrm{dep}(g) = i$ and call this the depth of $g$. The leading exponent of an
+#! element $g$ is $e_d$ where $d = \mathrm{dep}(g)$. The identity element satisfies $\mathrm{dep}(1) = n + 1$ and does not
 #! have leading exponent.
 
 
@@ -48,7 +48,7 @@ DeclareGlobalFunction( "Sifting" );
 
 #! One of the main programs of this package is to compute the minimum element in $g^U $ with respect to 
 #! $\ll$; this element is known as the canonical conjugacy representative of $g$, which is 
-#! denoted as $\operatorname{Cano}_U(g)$. This program also computes the centralizer $C_U(g)$. This package is supplementary to the
+#! denoted as $\mathrm{Cano}_U(g)$. This program also computes the centralizer $C_U(g)$. This package is supplementary to the
 #! article of Eick and Fernández Ayala <Cite Key="cano" />.
 
 ### conjugacy.gi
@@ -82,18 +82,18 @@ DeclareInfoClass( "InfoConjugacyElements" );
 #! and $N_V(U) = \{g \in V \mid U^g = U\}$ for the corresponding normalizer.
 
 #! Let $U \leq G$ be given by its basis $(u_1,\dots, u_n)$. Let $N \leq N_G(U)$ and $g \in N$.
-#! We define $\operatorname{Cano}_N^U(g)$ as the unique reduced preimage of $\operatorname{Cano}_{N/U}(gU)$ under the natural 
+#! We define $\mathrm{Cano}_N^U(g)$ as the unique reduced preimage of $\mathrm{Cano}_{N/U}(gU)$ under the natural 
 #! homomorphism $N \rightarrow N/U$. 
 	  
 #! Now we consider two subgroups $W$ and $V$ of $G$, and write $W_i = W \cap G_i $ for $1 \leq i \leq n$.
-#! We define $\operatorname{Cano}_V (W )$ inductively: suppose that $U_{i+1} = \operatorname{Cano}_V (W_i+1)$ is given by a basis 
+#! We define $\mathrm{Cano}_V (W )$ inductively: suppose that $U_{i+1} = \mathrm{Cano}_V (W_i+1)$ is given by a basis 
 #! $u_{i+1},\dots, u_n$ together with a conjugating element $U_i+1 = W^v_{i+1}$ and its normalizer 
-#! $N = N_V (U_{i+1})$. Suppose that $W_i \neq W_{i+1}$ and $W_i = \langle w_i, W_{i+1}\rangle $. Let 
-#! $w_i^\prime$ be the normalized power of the conjugate $w^v_i$. Set $u_i = \operatorname{Cano}^{U_{i+1}}_N(w^\prime_i)$,
-#! then $(u_i,\dots, u_n)$ is a basis for a subgroup $U_i$ of $G_i$. We write $\operatorname{Cano}_V (W )$ for the
+#! $N = N_V (U_{i+1})$. Suppose that $W_i &lt; W_{i+1}$ and $W_i = \langle w_i, W_{i+1}\rangle $. Let 
+#! $w_i^\prime$ be the normalized power of the conjugate $w^v_i$. Set $u_i = \mathrm{Cano}^{U_{i+1}}_N(w^\prime_i)$,
+#! then $(u_i,\dots, u_n)$ is a basis for a subgroup $U_i$ of $G_i$. We write $\mathrm{Cano}_V (W )$ for the
 #! subgroup $U_1$ eventually determined by an iterated process.
 
-#! One of the main programs of this package is to compute $\operatorname{Cano}_V (W )$. This program also computes the normalizer
+#! One of the main programs of this package is to compute $\mathrm{Cano}_V (W )$. This program also computes the normalizer
 #! of $ N_V(W) $.
 
 #! @Description
